@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="2400" height="1040" style="font-family: Inter, SF Pro, system-ui, sans-serif;">
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1a2040" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+    <linearGradient id="humanGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f8fff"/>
+      <stop offset="100%" stop-color="#2558d9"/>
+    </linearGradient>
+    <linearGradient id="aiGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5b9aff"/>
+      <stop offset="100%" stop-color="#3366e8"/>
+    </linearGradient>
+    <linearGradient id="aiGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e87cb0"/>
+      <stop offset="100%" stop-color="#c44f8a"/>
+    </linearGradient>
+    <linearGradient id="aiGrad3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a66de8"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="completeGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b6fe8"/>
+      <stop offset="100%" stop-color="#5b9aff"/>
+    </linearGradient>
+    <linearGradient id="incompleteGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c44f8a"/>
+      <stop offset="100%" stop-color="#e87cb0"/>
+    </linearGradient>
+    <linearGradient id="invalidGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#a66de8"/>
+    </linearGradient>
+    <marker id="arrowBlue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5b9aff"/>
+    </marker>
+    <marker id="arrowPink" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e87cb0"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a66de8"/>
+    </marker>
+    <clipPath id="boxClip">
+      <rect x="330" y="55" width="480" height="410" rx="16"/>
+    </clipPath>
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="520" fill="#0a0e1a"/>
+  <rect width="1200" height="520" fill="url(#grid)"/>
+  
+  <circle cx="100" cy="260" r="80" fill="#4f8fff" opacity="0.04" filter="url(#bigGlow)"/>
+  <circle cx="570" cy="260" r="160" fill="#4f8fff" opacity="0.02" filter="url(#bigGlow)"/>
+  
+  <!-- HUMAN SPEECH NODE -->
+  <circle cx="100" cy="260" r="62" fill="none" stroke="#4f8fff" stroke-width="1" opacity="0.15">
+    <animate attributeName="r" values="62;72;62" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.15;0.05;0.15" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="260" r="56" fill="none" stroke="#4f8fff" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="100" cy="260" r="48" fill="#4f8fff" opacity="0.15" filter="url(#bigGlow)"/>
+  <circle cx="100" cy="260" r="48" fill="url(#humanGrad)" opacity="0.9"/>
+  <circle cx="100" cy="260" r="48" fill="none" stroke="#7abaff" stroke-width="1.5" opacity="0.4"/>
+  <rect x="78" y="248" width="3" height="24" rx="1.5" fill="white" opacity="0.8"/>
+  <rect x="86" y="240" width="3" height="40" rx="1.5" fill="white"/>
+  <rect x="94" y="244" width="3" height="32" rx="1.5" fill="white" opacity="0.9"/>
+  <rect x="102" y="238" width="3" height="44" rx="1.5" fill="white"/>
+  <rect x="110" y="246" width="3" height="28" rx="1.5" fill="white" opacity="0.85"/>
+  <rect x="118" y="252" width="3" height="16" rx="1.5" fill="white" opacity="0.7"/>
+  <text x="100" y="332" text-anchor="middle" fill="#8ab4ff" font-size="13" font-weight="600" letter-spacing="0.5">Human Speech</text>
+  
+  <!-- MAIN ARROW -->
+  <line x1="155" y1="260" x2="325" y2="260" stroke="#4f8fff" stroke-width="2" opacity="0.5" stroke-dasharray="6 4">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="320,252 336,260 320,268" fill="#4f8fff" opacity="0.7"/>
+  
+  <!-- CLASSIFICATION BOX -->
+  <rect x="330" y="55" width="480" height="410" rx="16" fill="#0d1225" stroke="#1e2a4a" stroke-width="1.5"/>
+  <g clip-path="url(#boxClip)" opacity="0.3">
+    <line x1="330" y1="55" x2="330" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="360" y1="55" x2="360" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="390" y1="55" x2="390" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="420" y1="55" x2="420" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="450" y1="55" x2="450" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="480" y1="55" x2="480" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="510" y1="55" x2="510" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="540" y1="55" x2="540" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="570" y1="55" x2="570" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="600" y1="55" x2="600" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="630" y1="55" x2="630" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="660" y1="55" x2="660" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="690" y1="55" x2="690" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="720" y1="55" x2="720" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="750" y1="55" x2="750" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="780" y1="55" x2="780" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="810" y1="55" x2="810" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="55" x2="810" y2="55" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="85" x2="810" y2="85" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="115" x2="810" y2="115" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="145" x2="810" y2="145" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="175" x2="810" y2="175" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="205" x2="810" y2="205" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="235" x2="810" y2="235" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="265" x2="810" y2="265" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="295" x2="810" y2="295" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="325" x2="810" y2="325" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="355" x2="810" y2="355" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="385" x2="810" y2="385" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="415" x2="810" y2="415" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="445" x2="810" y2="445" stroke="#1a2545" stroke-width="0.5"/>
+    <line x1="330" y1="465" x2="810" y2="465" stroke="#1a2545" stroke-width="0.5"/>
+  </g>
+  
+  <text x="570" y="90" text-anchor="middle" fill="#4a6a9a" font-size="11" font-weight="600" letter-spacing="2">CLASSIFICATION</text>
+  <line x1="490" y1="100" x2="650" y2="100" stroke="#1e2a4a" stroke-width="0.5"/>
+  
+  <!-- COMPLETE -->
+  <rect x="380" y="125" width="380" height="56" rx="10" fill="#1a2555" opacity="0.6"/>
+  <rect x="380" y="125" width="380" height="56" rx="10" fill="none" stroke="#3b6fe8" stroke-width="1" opacity="0.4"/>
+  <rect x="382" y="127" width="376" height="52" rx="9" fill="url(#completeGrad)" opacity="0.15"/>
+  <rect x="380" y="125" width="4" height="56" rx="2" fill="#5b9aff"/>
+  <circle cx="408" cy="153" r="8" fill="#3b6fe8" opacity="0.3"/>
+  <path d="M404,153 L407,156 L413,150" fill="none" stroke="#5b9aff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="428" y="157" fill="#a0c4ff" font-size="15" font-weight="600">Complete</text>
+  <text x="720" y="157" text-anchor="end" fill="#4a6a9a" font-size="11">直接响应</text>
+  
+  <!-- INCOMPLETE -->
+  <rect x="380" y="225" width="380" height="56" rx="10" fill="#2a1a2a" opacity="0.6"/>
+  <rect x="380" y="225" width="380" height="56" rx="10" fill="none" stroke="#c44f8a" stroke-width="1" opacity="0.4"/>
+  <rect x="382" y="227" width="376" height="52" rx="9" fill="url(#incompleteGrad)" opacity="0.12"/>
+  <rect x="380" y="225" width="4" height="56" rx="2" fill="#e87cb0"/>
+  <circle cx="408" cy="253" r="8" fill="#c44f8a" opacity="0.3"/>
+  <text x="405" y="257" fill="#e87cb0" font-size="14" font-weight="bold">?</text>
+  <text x="428" y="257" fill="#f0a0c8" font-size="15" font-weight="600">Incomplete</text>
+  <text x="720" y="257" text-anchor="end" fill="#7a5070" font-size="11">追问补全</text>
+  
+  <!-- INVALID -->
+  <rect x="380" y="325" width="380" height="56" rx="10" fill="#1e1530" opacity="0.6"/>
+  <rect x="380" y="325" width="380" height="56" rx="10" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.4"/>
+  <rect x="382" y="327" width="376" height="52" rx="9" fill="url(#invalidGrad)" opacity="0.1"/>
+  <rect x="380" y="325" width="4" height="56" rx="2" fill="#a66de8"/>
+  <circle cx="408" cy="353" r="8" fill="#7c3aed" opacity="0.3"/>
+  <text x="406" y="357" fill="#a66de8" font-size="14" font-weight="bold">✕</text>
+  <text x="428" y="357" fill="#c8a0f0" font-size="15" font-weight="600">Invalid</text>
+  <text x="720" y="357" text-anchor="end" fill="#5a4070" font-size="11">拒绝/引导</text>
+  
+  <!-- CONNECTION LINES WITH ANIMATED PARTICLES -->
+  <path d="M760,153 Q850,153 900,120" fill="none" stroke="#5b9aff" stroke-width="1.5" opacity="0.5" marker-end="url(#arrowBlue)"/>
+  <circle r="3" fill="#5b9aff" opacity="0.8">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M760,153 Q850,153 900,120"/>
+  </circle>
+  
+  <path d="M760,253 Q850,253 920,260" fill="none" stroke="#e87cb0" stroke-width="2.5" opacity="0.7" marker-end="url(#arrowPink)"/>
+  <circle r="4" fill="#e87cb0" opacity="0.9">
+    <animateMotion dur="1.8s" repeatCount="indefinite" path="M760,253 Q850,253 920,260"/>
+  </circle>
+  
+  <path d="M760,353 Q850,353 910,400" fill="none" stroke="#a66de8" stroke-width="1.5" opacity="0.5" marker-end="url(#arrowPurple)"/>
+  <circle r="3" fill="#a66de8" opacity="0.8">
+    <animateMotion dur="2.2s" repeatCount="indefinite" path="M760,353 Q850,353 910,400"/>
+  </circle>
+  
+  <!-- AI NODE 1 -->
+  <circle cx="960" cy="100" r="42" fill="#5b9aff" opacity="0.06" filter="url(#bigGlow)"/>
+  <circle cx="960" cy="100" r="40" fill="none" stroke="#3b6fe8" stroke-width="0.5" opacity="0.2">
+    <animate attributeName="r" values="40;46;40" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.05;0.2" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="960" cy="100" r="36" fill="#0d1225" stroke="#3b6fe8" stroke-width="1.2" opacity="0.8"/>
+  <circle cx="960" cy="100" r="36" fill="url(#aiGrad1)" opacity="0.2"/>
+  <text x="960" y="105" text-anchor="middle" fill="#a0c4ff" font-size="15" font-weight="700" letter-spacing="1">AI</text>
+  <circle cx="960" cy="100" r="22" fill="none" stroke="#5b9aff" stroke-width="0.5" opacity="0.3" stroke-dasharray="3 3">
+    <animateTransform attributeName="transform" type="rotate" from="0 960 100" to="360 960 100" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- AI NODE 2 -->
+  <circle cx="980" cy="260" r="52" fill="#e87cb0" opacity="0.06" filter="url(#bigGlow)"/>
+  <circle cx="980" cy="260" r="48" fill="none" stroke="#e87cb0" stroke-width="0.5" opacity="0.25">
+    <animate attributeName="r" values="48;55;48" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0.08;0.25" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="980" cy="260" r="44" fill="#0d1225" stroke="#c44f8a" stroke-width="1.8" opacity="0.9"/>
+  <circle cx="980" cy="260" r="44" fill="url(#aiGrad2)" opacity="0.25"/>
+  <text x="980" y="265" text-anchor="middle" fill="#f0c0d8" font-size="18" font-weight="700" letter-spacing="1">AI</text>
+  <circle cx="980" cy="260" r="28" fill="none" stroke="#e87cb0" stroke-width="0.5" opacity="0.3" stroke-dasharray="3 3">
+    <animateTransform attributeName="transform" type="rotate" from="0 980 260" to="-360 980 260" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="980" cy="260" r="54" fill="none" stroke="#e87cb0" stroke-width="1" opacity="0.12">
+    <animate attributeName="r" values="54;62;54" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.12;0;0.12" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- AI NODE 3 -->
+  <circle cx="960" cy="420" r="42" fill="#a66de8" opacity="0.06" filter="url(#bigGlow)"/>
+  <circle cx="960" cy="420" r="40" fill="none" stroke="#7c3aed" stroke-width="0.5" opacity="0.2">
+    <animate attributeName="r" values="40;46;40" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.05;0.2" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="960" cy="420" r="36" fill="#0d1225" stroke="#7c3aed" stroke-width="1.2" opacity="0.8"/>
+  <circle cx="960" cy="420" r="36" fill="url(#aiGrad3)" opacity="0.2"/>
+  <text x="960" y="425" text-anchor="middle" fill="#c8b0f0" font-size="15" font-weight="700" letter-spacing="1">AI</text>
+  <circle cx="960" cy="420" r="22" fill="none" stroke="#a66de8" stroke-width="0.5" opacity="0.3" stroke-dasharray="3 3">
+    <animateTransform attributeName="transform" type="rotate" from="0 960 420" to="360 960 420" dur="22s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- LABELS -->
+  <text x="960" y="155" text-anchor="middle" fill="#4a6a9a" font-size="10" letter-spacing="0.5">直接回答</text>
+  <text x="980" y="320" text-anchor="middle" fill="#7a5070" font-size="10" letter-spacing="0.5">追问 → 回答</text>
+  <text x="960" y="472" text-anchor="middle" fill="#5a4070" font-size="10" letter-spacing="0.5">拒绝/引导</text>
+  
+  <!-- CORNER MARKS -->
+  <g opacity="0.15" stroke="#4f8fff" stroke-width="1">
+    <path d="M20,20 L20,40 M20,20 L40,20"/>
+    <path d="M1180,20 L1180,40 M1180,20 L1160,20"/>
+    <path d="M20,500 L20,480 M20,500 L40,500"/>
+    <path d="M1180,500 L1180,480 M1180,500 L1160,500"/>
+  </g>
+</svg>
