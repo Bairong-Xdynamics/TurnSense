@@ -352,7 +352,7 @@ python TurnSense/Turn_benchmark/benchmark.py
 | :--- | :--- |
 | 📧 邮箱 | [huan.shen@brgroup.com](mailto:huan.shen@brgroup.com) ・ [yingao.wang@brgroup.com](mailto:yingao.wang@brgroup.com) ・ [wei.zou@brgroup.com](mailto:wei.zou@brgroup.com) |
 | 💬 微信 | h2538406363 |
-| 👥 微信群聊 | 扫码加入群聊<br><img src="TurnSense/TurnSense/image/wechat.jpg" alt="微信群聊二维码" width="220" /> |
+| 👥 微信群聊 | 扫码加入群聊<br><img src="TurnSense/image/wechat.jpg" alt="微信群聊二维码" width="220" /> |
 | 🐛 Issues | [GitHub Issues](https://github.com/Bairong-Xdynamics/TurnSense/issues) |
 | 🔀 PR | [Pull Requests](https://github.com/Bairong-Xdynamics/TurnSense/pulls) |
 
