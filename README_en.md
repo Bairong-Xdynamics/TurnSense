@@ -27,7 +27,7 @@ license: apache-2.0
 
 <br/>
 
-**Language**: **English** | [中文](./README_zh.md)
+**Language**: **English** | [中文](./README.md)
 
 <br/>
 
